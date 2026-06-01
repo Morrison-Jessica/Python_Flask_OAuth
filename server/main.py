@@ -8,6 +8,7 @@ from dotenv import load_dotenv, find_dotenv
 from functools import wraps
 import os
 
+load_dotenv(find_dotenv())
 
 app = Flask(__name__)
 
@@ -105,5 +106,5 @@ def settings():
 
 # ======== run app ========
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000,debug=True)
 
